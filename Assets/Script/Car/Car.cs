@@ -17,6 +17,7 @@ public class Car : MonoBehaviour
     float TotalTimeSmooth = 0.0f;
     protected float MindSpeed = 0.0f;
     protected float MindSmood = 0.0f;
+    public bool click = false;
     // Start is called before the first frame update
     void Start()
     {

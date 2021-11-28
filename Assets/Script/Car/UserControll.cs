@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UserControll : Car
 {
-    public bool click = false;
     // Start is called before the first frame update
     void Start()
     {
