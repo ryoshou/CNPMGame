@@ -2,21 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserControll : MonoBehaviour
+public class UserControll : Car
 {
-    public float Smooth = 8.0f;
-    public float MaxSmooth = 12.0f;
-    public float CurrentSmooth = 0.0f;
-    public float Speed = 4.0f;
-    public float MaxSpeed = 8.0f;
-    public float AccelerationTimeSpeed = 1.5f;
-    public float AccelerationTimeSmooth = 1.0f;
-    float CurrentTime = 0.0f;
-    float TotalTimeSpeed = 0.0f;
-    float TotalTimeSmooth = 0.0f;
-    public float CurrentSpeed = 0.0f;
-    float MindSpeed = 0.0f;
-    bool click = false;
+    public bool click = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,58 +18,38 @@ public class UserControll : MonoBehaviour
       
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
         {
-            UpdateCurrentTime();
             click = true;
-            MindSpeed = CurrentSpeed;
+            StartDrift();
         }
-
         if (Input.GetKey(KeyCode.A))
         {
-            CalculateSmooth();
-            transform.Rotate(0, 0, CurrentSmooth * 0.1f);
+            DriftLeft();
         }
         if (Input.GetKey(KeyCode.D))
         {
-            CalculateSmooth();
-            transform.Rotate(0, 0, -CurrentSmooth * 0.1f);
+            DriftRight();
         }
         if (Input.GetKeyUp(KeyCode.D)|| Input.GetKeyUp(KeyCode.A))
         {
-            UpdateCurrentTime();
             click = false;
-            MindSpeed = CurrentSpeed;
+            StartDrift();
         }
-
-        TotalTimeSpeed = Time.time - CurrentTime;
-        if (TotalTimeSpeed > AccelerationTimeSpeed)
-            TotalTimeSpeed = AccelerationTimeSpeed;
-
         if (click == false)
         {
-            CurrentSpeed = MindSpeed + (MaxSpeed - Speed) * (TotalTimeSpeed / AccelerationTimeSpeed);
-            if (CurrentSpeed > MaxSpeed)
-                CurrentSpeed = MaxSpeed;
+            acceleration();
         }
         else
         {
-            CurrentSpeed = MindSpeed - ((MaxSpeed - Speed) * (TotalTimeSpeed / AccelerationTimeSpeed));
-            if (CurrentSpeed < Speed)
-                CurrentSpeed = Speed;
+            deceleration();
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            UpdateCurrentTime();
         }
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector2.up * CurrentSpeed * Time.deltaTime);
+            GoUp();
         }
     }
-    void UpdateCurrentTime()
-    {
-        CurrentTime = Time.time;
-    }
-    void CalculateSmooth()
-    {
-        TotalTimeSmooth = Time.time - CurrentTime;
-        if (TotalTimeSmooth > AccelerationTimeSmooth)
-            TotalTimeSmooth = AccelerationTimeSmooth;
-        CurrentSmooth = Smooth + (MaxSmooth - Smooth) * (TotalTimeSmooth / AccelerationTimeSmooth);
-    }
+   
 }
