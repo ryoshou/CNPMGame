@@ -2,39 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Car
+public class Enemy : MonoBehaviour
 {
+    public float Speed = 6.0f;
+    public float Smooth = 250.0f;
     protected GameObject Player;
     protected Vector2 Vec;
+    protected float CurrentSpeed = 0;
     float Corner = 0;
     bool GoLeft = false;
     bool GoRight = false;
     // Start is called before the first frame update
     void Start()
     {
-        MindSpeed = Speed;
         Player = GameObject.FindGameObjectWithTag("Player");
-        CurrentSpeed = Speed+(MaxSpeed-Speed)/3;
+        CurrentSpeed = Speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Player == null)
+            return;
         Vec = Player.transform.position - transform.position;
         Corner = Vector2.Angle(new Vector2(transform.up.x,transform.up.y), Vec);
         Quaternion Rotation = Quaternion.LookRotation(Vector3.forward, Vec);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Rotation, 250 * Time.deltaTime);
-        GoUp();
+        transform.Translate(Vector2.up * CurrentSpeed * Time.deltaTime);
 
     }
-    void GoToRight()
+
+    void OnTriggerEnter2D(Collider2D col2)
     {
-        GoRight = true;
-        GoLeft = false;
-    }
-    void GoToLeft()
-    {
-        GoRight = false;
-        GoLeft = true;
+        if (col2.gameObject.tag == "Enemy")
+        {
+            Destroy(col2.gameObject);
+            Destroy(this);
+        }
+        if (col2.gameObject.tag == "Player")
+        {
+            Destroy(col2.gameObject);
+        }
     }
 }

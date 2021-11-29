@@ -20,6 +20,8 @@ public class Camer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Player == null)
+            return;
         Vector2 screenPos = Camera.main.WorldToScreenPoint(Player.transform.position);
         if (screenPos.x>Camera.main.pixelWidth* LimitRight )
         {
