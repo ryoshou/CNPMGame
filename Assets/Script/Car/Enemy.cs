@@ -34,12 +34,16 @@ public class Enemy : MonoBehaviour
     {
         if (col2.gameObject.tag == "Enemy")
         {
-           col2.gameObject.SetActive(false);
+           //col2.gameObject.SetActive(false);
            this.gameObject.SetActive(false);
+           GameObject Explode =  ObjectPooler.Instance.SpawnFromPool("explode", this.transform.position, this.transform.rotation);
+            Explode.GetComponent<explode>().Hit();
         }
         if (col2.gameObject.tag == "Player")
         {
             col2.gameObject.SetActive(false);
+            GameObject Canvas = GameObject.FindGameObjectWithTag("CanVas");
+            Canvas.GetComponent<Canvas>().Again();
         }
     }
 }

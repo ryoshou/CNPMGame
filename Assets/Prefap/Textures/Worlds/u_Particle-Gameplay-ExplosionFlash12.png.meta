@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: fd7ecfcffba6527478b9ffe7641f1793
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5874229418070973194
+    second: u_Particle-Gameplay-ExplosionFlash12_0
+  - first:
+      213: -4320269195672807631
+    second: u_Particle-Gameplay-ExplosionFlash12_1
+  - first:
+      213: -763069217748005581
+    second: u_Particle-Gameplay-ExplosionFlash12_2
+  - first:
+      213: 6137533871343554704
+    second: u_Particle-Gameplay-ExplosionFlash12_3
+  - first:
+      213: -4822930892882410200
+    second: u_Particle-Gameplay-ExplosionFlash12_4
+  - first:
+      213: -3046463244984397160
+    second: u_Particle-Gameplay-ExplosionFlash12_5
+  - first:
+      213: -7746254279273670513
+    second: u_Particle-Gameplay-ExplosionFlash12_6
+  - first:
+      213: -6461529819497655417
+    second: u_Particle-Gameplay-ExplosionFlash12_7
+  - first:
+      213: -4474736531878823956
+    second: u_Particle-Gameplay-ExplosionFlash12_8
+  - first:
+      213: 8643904881997150980
+    second: u_Particle-Gameplay-ExplosionFlash12_9
+  - first:
+      213: 8206376455744926899
+    second: u_Particle-Gameplay-ExplosionFlash12_10
+  - first:
+      213: 551556315303237845
+    second: u_Particle-Gameplay-ExplosionFlash12_11
+  - first:
+      213: 5237514212407273735
+    second: u_Particle-Gameplay-ExplosionFlash12_12
+  - first:
+      213: -8218169581622849909
+    second: u_Particle-Gameplay-ExplosionFlash12_13
+  - first:
+      213: 5733736984135813119
+    second: u_Particle-Gameplay-ExplosionFlash12_14
+  - first:
+      213: -1945064191430337372
+    second: u_Particle-Gameplay-ExplosionFlash12_15
+  - first:
+      213: -3052419438534338669
+    second: u_Particle-Gameplay-ExplosionFlash12_16
+  - first:
+      213: -3465589164027734489
+    second: u_Particle-Gameplay-ExplosionFlash12_17
+  - first:
+      213: -5840274683966655291
+    second: u_Particle-Gameplay-ExplosionFlash12_18
+  - first:
+      213: 9058995414981528783
+    second: u_Particle-Gameplay-ExplosionFlash12_19
+  - first:
+      213: -5267221459823866975
+    second: u_Particle-Gameplay-ExplosionFlash12_20
+  - first:
+      213: 587073443021386235
+    second: u_Particle-Gameplay-ExplosionFlash12_21
+  - first:
+      213: 2472334011629416306
+    second: u_Particle-Gameplay-ExplosionFlash12_22
+  - first:
+      213: 2619159346272982590
+    second: u_Particle-Gameplay-ExplosionFlash12_23
+  - first:
+      213: 2921192747949856083
+    second: u_Particle-Gameplay-ExplosionFlash12_24
+  - first:
+      213: -7572014610165238853
+    second: u_Particle-Gameplay-ExplosionFlash12_25
+  - first:
+      213: 1523800337866601800
+    second: u_Particle-Gameplay-ExplosionFlash12_26
+  - first:
+      213: 5703014846710855033
+    second: u_Particle-Gameplay-ExplosionFlash12_27
+  - first:
+      213: 982341574700042248
+    second: u_Particle-Gameplay-ExplosionFlash12_28
+  - first:
+      213: 7446838414663607579
+    second: u_Particle-Gameplay-ExplosionFlash12_29
+  - first:
+      213: 5639046724106064551
+    second: u_Particle-Gameplay-ExplosionFlash12_30
+  - first:
+      213: 5801693172045390048
+    second: u_Particle-Gameplay-ExplosionFlash12_31
+  - first:
+      213: -4657769184629775206
+    second: u_Particle-Gameplay-ExplosionFlash12_32
+  - first:
+      213: -8934545941777388932
+    second: u_Particle-Gameplay-ExplosionFlash12_33
+  - first:
+      213: -3048833334992018114
+    second: u_Particle-Gameplay-ExplosionFlash12_34
+  - first:
+      213: -8925058741463613643
+    second: u_Particle-Gameplay-ExplosionFlash12_35
+  - first:
+      213: -3889377691555236666
+    second: u_Particle-Gameplay-ExplosionFlash12_36
+  - first:
+      213: -1240251657312709421
+    second: u_Particle-Gameplay-ExplosionFlash12_37
+  - first:
+      213: -4384321008834888084
+    second: u_Particle-Gameplay-ExplosionFlash12_38
+  - first:
+      213: -4825181197242603771
+    second: u_Particle-Gameplay-ExplosionFlash12_39
+  - first:
+      213: 12211012141542493
+    second: u_Particle-Gameplay-ExplosionFlash12_40
+  - first:
+      213: 4885140672026860708
+    second: u_Particle-Gameplay-ExplosionFlash12_41
+  - first:
+      213: 2782708152898720692
+    second: u_Particle-Gameplay-ExplosionFlash12_42
+  - first:
+      213: 3354633146314041720
+    second: u_Particle-Gameplay-ExplosionFlash12_43
+  - first:
+      213: 6860699826342483991
+    second: u_Particle-Gameplay-ExplosionFlash12_44
+  - first:
+      213: 5587249524515912354
+    second: u_Particle-Gameplay-ExplosionFlash12_45
+  - first:
+      213: -3688344537738793735
+    second: u_Particle-Gameplay-ExplosionFlash12_46
+  - first:
+      213: 4459544666170031733
+    second: u_Particle-Gameplay-ExplosionFlash12_47
+  - first:
+      213: 1602546765731281323
+    second: u_Particle-Gameplay-ExplosionFlash12_48
+  - first:
+      213: 1394032115475745116
+    second: u_Particle-Gameplay-ExplosionFlash12_49
+  - first:
+      213: 8563406871616348576
+    second: u_Particle-Gameplay-ExplosionFlash12_50
+  - first:
+      213: -7246984895890741838
+    second: u_Particle-Gameplay-ExplosionFlash12_51
+  - first:
+      213: -5497914400443322116
+    second: u_Particle-Gameplay-ExplosionFlash12_52
+  - first:
+      213: -5769303669870186455
+    second: u_Particle-Gameplay-ExplosionFlash12_53
+  - first:
+      213: 3735956557404548033
+    second: u_Particle-Gameplay-ExplosionFlash12_54
+  - first:
+      213: 579791849406686041
+    second: u_Particle-Gameplay-ExplosionFlash12_55
+  - first:
+      213: -2472163289684650683
+    second: u_Particle-Gameplay-ExplosionFlash12_56
+  - first:
+      213: -981851450344669017
+    second: u_Particle-Gameplay-ExplosionFlash12_57
+  - first:
+      213: -8453211572115168986
+    second: u_Particle-Gameplay-ExplosionFlash12_58
+  - first:
+      213: 5754689528164403936
+    second: u_Particle-Gameplay-ExplosionFlash12_59
+  - first:
+      213: 2508846385953933694
+    second: u_Particle-Gameplay-ExplosionFlash12_60
+  - first:
+      213: 547904984795215875
+    second: u_Particle-Gameplay-ExplosionFlash12_61
+  - first:
+      213: -382636768905053082
+    second: u_Particle-Gameplay-ExplosionFlash12_62
+  - first:
+      213: 7466035129298137183
+    second: u_Particle-Gameplay-ExplosionFlash12_63
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b15416884758150800000000000000
+      internalID: 5874229418070973194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1371cd96e025b04c0800000000000000
+      internalID: -4320269195672807631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d4811e6980965f0800000000000000
+      internalID: -763069217748005581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0905c56b986ec2550800000000000000
+      internalID: 6137533871343554704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8258c79e7e1811db0800000000000000
+      internalID: -4822930892882410200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892db6dc1d9c8b5d0800000000000000
+      internalID: -3046463244984397160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f881b0046c6cf7490800000000000000
+      internalID: -7746254279273670513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7839f332dd80456a0800000000000000
+      internalID: -6461529819497655417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce736e915da86e1c0800000000000000
+      internalID: -4474736531878823956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b74bb51b155f770800000000000000
+      internalID: 8643904881997150980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b43ec148e7e2e170800000000000000
+      internalID: 8206376455744926899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8d547eb8587a700800000000000000
+      internalID: 551556315303237845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70968983d636fa840800000000000000
+      internalID: 5237514212407273735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e0377ae4233fd80800000000000000
+      internalID: -8218169581622849909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff74fee8863529f40800000000000000
+      internalID: 5733736984135813119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: u_Particle-Gameplay-ExplosionFlash12_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac567c5c6eb105e0800000000000000
+      internalID: -1945064191430337372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

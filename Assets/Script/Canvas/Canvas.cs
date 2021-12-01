@@ -24,20 +24,22 @@ public class Canvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player != null)
+        if (Player.active==true)
         {
             TxtSpeed.text = (int)(Player.GetComponent<UserControll>().CurrentSpeed*10) + "KM/H";
             SliderSpeed.value = Player.GetComponent<UserControll>().CurrentSpeed;
             Score.text = (int)Time.time+"";
         }
-        if(Player==null&& BtnPlayGame.active == false)
-        {
-            Debug.Log("aaa");
-            BtnPlayGame.SetActive(true);
-        }
     }
     public void Playgame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("TIN");
+    }
+    public void Again()
+    {
+        if (Player.active==false && BtnPlayGame.active == false)
+        {
+            BtnPlayGame.SetActive(true);
+        }
     }
 }
