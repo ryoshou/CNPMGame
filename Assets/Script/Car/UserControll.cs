@@ -43,7 +43,7 @@ public class UserControll : Car
             click = false;
         }
 
-        /*if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
         {
             click = true;
             StartDrift();
@@ -60,7 +60,7 @@ public class UserControll : Car
         {
             click = false;
             StartDrift();
-        }*/
+        }
         if (click == false)
         {
             acceleration();
