@@ -10,8 +10,6 @@ public class Enemy : MonoBehaviour
     protected Vector2 Vec;
     protected float CurrentSpeed = 0;
     float Corner = 0;
-    bool GoLeft = false;
-    bool GoRight = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +34,12 @@ public class Enemy : MonoBehaviour
     {
         if (col2.gameObject.tag == "Enemy")
         {
-            Destroy(col2.gameObject);
-            Destroy(this);
+           col2.gameObject.SetActive(false);
+           this.gameObject.SetActive(false);
         }
         if (col2.gameObject.tag == "Player")
         {
-            Destroy(col2.gameObject);
+            col2.gameObject.SetActive(false);
         }
     }
 }

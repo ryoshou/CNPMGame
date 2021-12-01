@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4373279995385340816}
   - component: {fileID: 4373279995385340817}
   - component: {fileID: 4373279995385340814}
+  - component: {fileID: 1269721423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4373279995385340815}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: -0.52, y: 0.25, z: 0}
-  m_LocalScale: {x: 0.70000005, y: 0.70000005, z: 0.7}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: -1869315837
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: a748bb512fb637d4b94389715849d284, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c469f789613db55458052f63265dd64c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,12 +95,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b825517fde732ae4eaa0d3d8c9f75f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Smooth: 7
-  MaxSmooth: 11
-  Speed: 5
+  Smooth: 9
+  MaxSmooth: 15
+  Speed: 6
   MaxSpeed: 9
   AccelerationTimeSpeed: 1.5
-  AccelerationTimeSmooth: 1.5
+  AccelerationTimeSmooth: 2
   CurrentSmooth: 0
   CurrentSpeed: 0
   click: 0
+--- !u!61 &1269721423
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4373279995385340815}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.7, y: 1.16}
+    newSize: {x: 0.7, y: 1.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1.16}
+  m_EdgeRadius: 0

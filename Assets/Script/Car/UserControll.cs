@@ -5,6 +5,8 @@ using UnityEngine;
 public class UserControll : Car
 {
     // Start is called before the first frame update
+    protected Vector2 Touched;
+    protected Vector2 Mid;
     void Start()
     {
         MindSpeed = Speed;
@@ -14,8 +16,34 @@ public class UserControll : Car
     void Update()
     {
         //transform.Translate(Vector2.up * 5 * Time.deltaTime);
-      
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        if(Input.touchCount>0)
+        {
+            Touched =Input.GetTouch(0).position; 
+            if(Touched.x >= Camera.main.pixelWidth/2)
+            {
+                DriftRight();
+            }
+            else
+            {
+                DriftLeft();
+            }
+            if(click==false)
+            {
+                StartDrift();
+            }
+            click = true;
+
+        }
+        else
+        {
+            if(click==true)
+            {
+                StartDrift();
+            }
+            click = false;
+        }
+
+        /*if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
         {
             click = true;
             StartDrift();
@@ -32,7 +60,7 @@ public class UserControll : Car
         {
             click = false;
             StartDrift();
-        }
+        }*/
         if (click == false)
         {
             acceleration();
@@ -41,14 +69,6 @@ public class UserControll : Car
         {
             deceleration();
         }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            UpdateCurrentTime();
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            GoUp();
-        }
+        GoUp();
     }
-   
 }
