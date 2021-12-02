@@ -17,7 +17,7 @@ public class Magnet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col2)
     {
-        if (col2.gameObject.tag == "Coin")
+        if (col2.gameObject.tag == "Coin" && this.gameObject.active==true)
         {
             col2.gameObject.GetComponent<Gold>().GoToPlayer();
         }

@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player == null)
+        if (Player.active == false)
             return;
         Vec = Player.transform.position - transform.position;
         Corner = Vector2.Angle(new Vector2(transform.up.x,transform.up.y), Vec);
@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour
         if (col2.gameObject.tag == "Player")
         {
             col2.gameObject.GetComponent<UserControll>().PlayerDie();
+            GameObject Explode = ObjectPooler.Instance.SpawnFromPool("explode", col2.transform.position, col2.transform.rotation);
+            Explode.GetComponent<explode>().Hit();
         }
     }
 }

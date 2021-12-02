@@ -31,7 +31,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: abf99c66ee0f04b49aa1eaaca8534ac1, type: 3}
-    totalSpriteSurfaceArea: 1303452
+    totalSpriteSurfaceArea: 1451788
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -45,6 +45,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bd3744e230e576b49892d83d4992bc8d, type: 3}
   - {fileID: 21300000, guid: 0f894623ab6f9604bb5b317cd8c8409b, type: 3}
   - {fileID: 21300000, guid: 84929415c6ce7584e8af47d402193c1c, type: 3}
+  - {fileID: 21300000, guid: 3b4f5cd57f9de7e4580d99302ea2b563, type: 3}
   - {fileID: 21300000, guid: 40556e06b58da9b4fbf3a701831543ce, type: 3}
   - {fileID: 21300000, guid: c2a7dc765f0219d46970e267b14a1420, type: 3}
   - {fileID: 21300000, guid: 275ff107a7aa66243a32e0b57eea6bcd, type: 3}
@@ -53,6 +54,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d01e13f807068f740b0287867e13d3be, type: 3}
   - {fileID: 21300000, guid: a07b67f89efbee645bf61aeaa9cc8592, type: 3}
   - {fileID: 21300000, guid: cf604a290a3567a47a9aff0b72219d53, type: 3}
+  - {fileID: 21300000, guid: b08e6849af1311f43a94ed00bf9e353b, type: 3}
   - {fileID: 21300000, guid: f605aa6937343654a8c2657e0ea3ecd1, type: 3}
   - {fileID: 21300000, guid: 6b1920c975844604cbc69cb16839567a, type: 3}
   - {fileID: 21300000, guid: 5ada5f8c9ebdb1342a551fec89673d27, type: 3}
@@ -61,6 +63,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: df30816d12ec00943bb6b3845b1c1ce5, type: 3}
   - {fileID: 21300000, guid: ddfd02cdbf570b14dafd2fbb1893d30b, type: 3}
   - {fileID: 21300000, guid: 94eccaede2deff34996a1c8f4b4d1381, type: 3}
+  - {fileID: 21300000, guid: c5d0c5fdf16a2dc498a75d3848f526d1, type: 3}
   - {fileID: 21300000, guid: ac813b3e9f970c544a16a1820466d56b, type: 3}
   - {fileID: 21300000, guid: 21d4374e876db874fa6c7a33c493f487, type: 3}
   - {fileID: 21300000, guid: 47daddeea19d5f74e89cabc952d2f371, type: 3}
@@ -77,6 +80,7 @@ SpriteAtlas:
   - u_circle
   - u_resume-button
   - u_ads
+  - Score
   - u_replay-button
   - u_button-white
   - coollogo_com-72921343
@@ -85,6 +89,7 @@ SpriteAtlas:
   - u_toggle-off
   - u_nen
   - u_long-bar-white
+  - Coin
   - u_icon-music
   - u_banroll-white
   - u_starburst
@@ -93,6 +98,7 @@ SpriteAtlas:
   - u_icon-heart
   - u_icon-volume
   - u_setting-button
+  - HightScore
   - u_back-button
   - u_pause-button
   - u_lop

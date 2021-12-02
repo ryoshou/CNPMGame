@@ -19,6 +19,8 @@ public class SpawnEnemy : MonoBehaviour
     void Start()
     {
         StartCoroutine(Spawn(TimeSpawn));
+        Player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class SpawnEnemy : MonoBehaviour
     private IEnumerator Spawn(float second)
     {
         yield return new WaitForSeconds(second);
-        if (Player != null)
+        if (Player.active == true)
         {
             posX = Arr[Random.Range(0,1)]* Random.Range(SafeWitdh, DistanceWitdh);
             PosY = Arr[Random.Range(0, 1)] * Random.Range(SafeHeight, DistanceHeight);

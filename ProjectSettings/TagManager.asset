@@ -8,6 +8,7 @@ TagManager:
   - CanVas
   - explode
   - Coin
+  - Setting
   layers:
   - Default
   - TransparentFX

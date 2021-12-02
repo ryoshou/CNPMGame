@@ -9,21 +9,24 @@ using UnityEngine.SceneManagement;
 public class Canvas : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject PanelInGame;
     public float MaxSpeed = 15.0f;
     public Slider SliderSpeed;
     public Text TxtSpeed;
     public Text Score;
     public Text Gold;
-    public GameObject BtnPlayGame;
+    public GameObject PanelGameover;
+    public float TimeInstruire = 2.0f;
     protected float CurrentTime = 0;
     protected int CurrentGold = 0;
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 0;
         CurrentGold = 0;
         CurrentTime = Time.time;
         SliderSpeed.maxValue = MaxSpeed;
-        BtnPlayGame.SetActive(false);
+        PanelGameover.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,14 +42,15 @@ public class Canvas : MonoBehaviour
     public void Playgame()
     {
         ResumeGame();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("TIN");
+        PanelInGame.SetActive(true);
     }
-    public void Again()
+    private IEnumerator Gameover(float second)
     {
+        yield return new WaitForSeconds(second);
         PauseGame();
-        if (Player.active==false && BtnPlayGame.active == false)
+        if (Player.active == false && PanelGameover.active == false)
         {
-            BtnPlayGame.SetActive(true);
+            PanelGameover.SetActive(true);
         }
     }
     public void AddGold()
@@ -60,5 +64,13 @@ public class Canvas : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
+    }
+    public void BackHome()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TIN");
+    }
+    public void startGameover(float TimeDie)
+    {
+        StartCoroutine(Gameover(TimeDie));
     }
 }

@@ -14,13 +14,13 @@ public class Camer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Player == null)
+        if (Player.active == false)
             return;
         Vector2 screenPos = Camera.main.WorldToScreenPoint(Player.transform.position);
         if (screenPos.x>Camera.main.pixelWidth* LimitRight )
@@ -61,5 +61,9 @@ public class Camer : MonoBehaviour
             transform.Translate(Player.transform.up * Speed * Time.deltaTime);
         }
        
+    }
+    public void FightPlayer()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 }
