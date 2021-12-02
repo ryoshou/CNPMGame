@@ -31,7 +31,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: abf99c66ee0f04b49aa1eaaca8534ac1, type: 3}
-    totalSpriteSurfaceArea: 1451788
+    totalSpriteSurfaceArea: 1529164
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -57,6 +57,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b08e6849af1311f43a94ed00bf9e353b, type: 3}
   - {fileID: 21300000, guid: f605aa6937343654a8c2657e0ea3ecd1, type: 3}
   - {fileID: 21300000, guid: 6b1920c975844604cbc69cb16839567a, type: 3}
+  - {fileID: 21300000, guid: 815920aa24189e74db0737ba6a689c96, type: 3}
   - {fileID: 21300000, guid: 5ada5f8c9ebdb1342a551fec89673d27, type: 3}
   - {fileID: 21300000, guid: e5b410fc7f1fa7641aaabb67b98aed26, type: 3}
   - {fileID: 21300000, guid: dede1b3d36db2b54e8992c9f7e87b460, type: 3}
@@ -92,6 +93,7 @@ SpriteAtlas:
   - Coin
   - u_icon-music
   - u_banroll-white
+  - tap
   - u_starburst
   - u_logo
   - u_instruction

@@ -17,6 +17,9 @@ public class Canvas : MonoBehaviour
     public Text Gold;
     public GameObject PanelGameover;
     public float TimeInstruire = 2.0f;
+    public GameObject U_instruction;
+    public GameObject PanelPauseGame;
+    public GameObject btnPause, btnResume;
     protected float CurrentTime = 0;
     protected int CurrentGold = 0;
     // Start is called before the first frame update
@@ -43,6 +46,8 @@ public class Canvas : MonoBehaviour
     {
         ResumeGame();
         PanelInGame.SetActive(true);
+        U_instruction.SetActive(true);
+        U_instruction.GetComponent<u_instruction>().start();
     }
     private IEnumerator Gameover(float second)
     {
@@ -80,6 +85,9 @@ public class Canvas : MonoBehaviour
         PanelGameover.SetActive(false);
         CurrentTime = Time.time;
         CurrentGold = 0;
+        PanelPauseGame.SetActive(false);
+        btnPause.SetActive(true);
+        btnResume.SetActive(false);
         //Reset player
         Player.SetActive(true);
         Player.GetComponent<UserControll>().IsDie = false;
