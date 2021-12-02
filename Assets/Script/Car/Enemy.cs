@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         Vec = Player.transform.position - transform.position;
         Corner = Vector2.Angle(new Vector2(transform.up.x,transform.up.y), Vec);
         Quaternion Rotation = Quaternion.LookRotation(Vector3.forward, Vec);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Rotation, 250 * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Rotation, Smooth * Time.deltaTime);
         transform.Translate(Vector2.up * CurrentSpeed * Time.deltaTime);
 
     }
@@ -37,13 +37,11 @@ public class Enemy : MonoBehaviour
            //col2.gameObject.SetActive(false);
            this.gameObject.SetActive(false);
            GameObject Explode =  ObjectPooler.Instance.SpawnFromPool("explode", this.transform.position, this.transform.rotation);
-            Explode.GetComponent<explode>().Hit();
+           Explode.GetComponent<explode>().Hit();
         }
         if (col2.gameObject.tag == "Player")
         {
-            col2.gameObject.SetActive(false);
-            GameObject Canvas = GameObject.FindGameObjectWithTag("CanVas");
-            Canvas.GetComponent<Canvas>().Again();
+            col2.gameObject.GetComponent<UserControll>().PlayerDie();
         }
     }
 }

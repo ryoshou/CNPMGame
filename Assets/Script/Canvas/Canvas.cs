@@ -38,10 +38,12 @@ public class Canvas : MonoBehaviour
     }
     public void Playgame()
     {
+        ResumeGame();
         UnityEngine.SceneManagement.SceneManager.LoadScene("TIN");
     }
     public void Again()
     {
+        PauseGame();
         if (Player.active==false && BtnPlayGame.active == false)
         {
             BtnPlayGame.SetActive(true);
@@ -50,5 +52,13 @@ public class Canvas : MonoBehaviour
     public void AddGold()
     {
         Gold.text = ++CurrentGold + "";
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
 }

@@ -71,4 +71,10 @@ public class UserControll : Car
         }
         GoUp();
     }
+    public void PlayerDie()
+    {
+        this.gameObject.SetActive(false);
+        GameObject Canvas = GameObject.FindGameObjectWithTag("CanVas");
+        Canvas.GetComponent<Canvas>().Again();
+    }
 }
