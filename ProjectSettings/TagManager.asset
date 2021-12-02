@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - CanVas
   - explode
+  - Coin
   layers:
   - Default
   - TransparentFX

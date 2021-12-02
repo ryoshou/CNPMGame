@@ -13,10 +13,15 @@ public class Canvas : MonoBehaviour
     public Slider SliderSpeed;
     public Text TxtSpeed;
     public Text Score;
+    public Text Gold;
     public GameObject BtnPlayGame;
+    protected float CurrentTime = 0;
+    protected int CurrentGold = 0;
     // Start is called before the first frame update
     void Start()
     {
+        CurrentGold = 0;
+        CurrentTime = Time.time;
         SliderSpeed.maxValue = MaxSpeed;
         BtnPlayGame.SetActive(false);
     }
@@ -28,7 +33,7 @@ public class Canvas : MonoBehaviour
         {
             TxtSpeed.text = (int)(Player.GetComponent<UserControll>().CurrentSpeed*10) + "KM/H";
             SliderSpeed.value = Player.GetComponent<UserControll>().CurrentSpeed;
-            Score.text = (int)Time.time+"";
+            Score.text = (int)(Time.time-CurrentTime)+"";
         }
     }
     public void Playgame()
@@ -41,5 +46,9 @@ public class Canvas : MonoBehaviour
         {
             BtnPlayGame.SetActive(true);
         }
+    }
+    public void AddGold()
+    {
+        Gold.text = ++CurrentGold + "";
     }
 }
