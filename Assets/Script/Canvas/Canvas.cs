@@ -73,4 +73,21 @@ public class Canvas : MonoBehaviour
     {
         StartCoroutine(Gameover(TimeDie));
     }
+    public void GameAgain()
+    {
+        //Reset canvas
+        Playgame();
+        PanelGameover.SetActive(false);
+        CurrentTime = Time.time;
+        CurrentGold = 0;
+        //Reset player
+        Player.SetActive(true);
+        Player.GetComponent<UserControll>().IsDie = false;
+        //Reset Enemy
+        GameObject[] Enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject obj in Enemys)
+        {
+            obj.SetActive(false);
+        }    
+    }
 }

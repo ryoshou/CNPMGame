@@ -8,7 +8,7 @@ public class UserControll : Car
     // Start is called before the first frame update
     protected Vector2 Touched;
     protected Vector2 Mid;
-    protected bool IsDie = false;
+    public bool IsDie = false;
 
     void Start()
     {
