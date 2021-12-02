@@ -31,7 +31,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: abf99c66ee0f04b49aa1eaaca8534ac1, type: 3}
-    totalSpriteSurfaceArea: 1252044
+    totalSpriteSurfaceArea: 1303452
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -47,6 +47,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 84929415c6ce7584e8af47d402193c1c, type: 3}
   - {fileID: 21300000, guid: 40556e06b58da9b4fbf3a701831543ce, type: 3}
   - {fileID: 21300000, guid: c2a7dc765f0219d46970e267b14a1420, type: 3}
+  - {fileID: 21300000, guid: 275ff107a7aa66243a32e0b57eea6bcd, type: 3}
   - {fileID: 21300000, guid: e18f45383bb125b4e9de0aef367fa4ec, type: 3}
   - {fileID: 21300000, guid: 5d3a273883a5fee41ba917b47fefbf3e, type: 3}
   - {fileID: 21300000, guid: d01e13f807068f740b0287867e13d3be, type: 3}
@@ -78,6 +79,7 @@ SpriteAtlas:
   - u_ads
   - u_replay-button
   - u_button-white
+  - coollogo_com-72921343
   - u_outline-button
   - u_square
   - u_toggle-off
