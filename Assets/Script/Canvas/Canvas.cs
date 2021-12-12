@@ -14,7 +14,7 @@ public class Canvas : MonoBehaviour
     public Slider SliderSpeed;
     public Text TxtSpeed;
     public Text Score;
-    public Text Gold;
+    public Text Gold,MyGold;
     public GameObject PanelGameover;
     public float TimeInstruire = 2.0f;
     public GameObject U_instruction;
@@ -30,6 +30,7 @@ public class Canvas : MonoBehaviour
         CurrentTime = Time.time;
         SliderSpeed.maxValue = MaxSpeed;
         PanelGameover.SetActive(false);
+        MyGold.text = PlayerPrefs.GetInt("CURRENTCOIN", 50) + "";
     }
 
     // Update is called once per frame
@@ -56,6 +57,9 @@ public class Canvas : MonoBehaviour
         if (Player.active == false && PanelGameover.active == false)
         {
             PanelGameover.SetActive(true);
+            int gold = PlayerPrefs.GetInt("CURRENTCOIN", 50) + CurrentGold;
+            PlayerPrefs.SetInt("CURRENTCOIN", gold);
+            MyGold.text = gold + "";
         }
     }
     public void AddGold()

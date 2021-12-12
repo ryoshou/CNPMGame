@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
+    public int id = 0;
     public float Smooth = 8.0f;
     public float MaxSmooth = 12.0f;
     public float Speed = 4.0f;
