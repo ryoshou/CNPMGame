@@ -8,37 +8,46 @@ public class TileManager : MonoBehaviour
 
     private Transform playerTransform;
     private Transform spawnPoints;
-    private int tmp;
+    private Vector3 prePos;
     public float spritePixels = 2f;
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        tmp = 1;
+        prePos = playerTransform.position;
+        SpawnTile(playerTransform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.x>20.48*tmp)
+        Debug.Log("Player pos: " + playerTransform.position.x + " " +playerTransform.position.y);
+        Debug.Log("Pre Pos: " + prePos.x + " " + prePos.y);
+        if (isOutOfLimit(playerTransform.position,spritePixels*1.5f))
         {
-            SpawnTile();
-            tmp++;
+            SpawnTile(playerTransform.position);
+            prePos = playerTransform.position;
         }
     }
     
-    private void SpawnTile()
+    bool isOutOfLimit(Vector3 pos, float limit)
     {
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x + spritePixels, playerTransform.position.y + spritePixels, 0), Quaternion.identity);
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x , playerTransform.position.y + spritePixels, 0), Quaternion.identity);
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x - spritePixels, playerTransform.position.y + spritePixels, 0), Quaternion.identity);
+        if (pos.x>prePos.x+limit || pos.y>prePos.y+limit || pos.x<prePos.x-limit || pos.y<prePos.y-limit)
+            return true;
+        return false;
+    }
+    private void SpawnTile(Vector2 pos)
+    {
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x + spritePixels, pos.y + spritePixels, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x , pos.y + spritePixels, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x - spritePixels, pos.y + spritePixels, 0), Quaternion.identity);
 
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x + spritePixels, playerTransform.position.y, 0), Quaternion.identity);
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x , playerTransform.position.y, 0), Quaternion.identity);
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x - spritePixels, playerTransform.position.y, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x + spritePixels, pos.y, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x , pos.y, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x - spritePixels, pos.y, 0), Quaternion.identity);
 
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x + spritePixels, playerTransform.position.y - spritePixels, 0), Quaternion.identity);
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x, playerTransform.position.y - spritePixels, 0), Quaternion.identity);
-        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(playerTransform.position.x - spritePixels, playerTransform.position.y - spritePixels, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x + spritePixels, pos.y - spritePixels, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x, pos.y - spritePixels, 0), Quaternion.identity);
+        Instantiate(tilePrefabs[Random.Range(0,tilePrefabs.Length)], new Vector3(pos.x - spritePixels, pos.y - spritePixels, 0), Quaternion.identity);
     }
 }
