@@ -119,6 +119,7 @@ public class Shop : MonoBehaviour
             ColorBlock cb = Select.GetComponent<Button>().colors;
             cb.normalColor = SelectColor;
             Select.GetComponent<Button>().colors = cb;
+            Player.GetComponent<UserControll>().ChangeCar(CarNow);
         }    
     }
     public void RightClick()

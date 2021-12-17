@@ -14,6 +14,7 @@ public class UserControll : Car
     {
         MindSpeed = Speed;
         IsDie = false;
+        ChangeCar(PlayerPrefs.GetInt("CURRENTCAR", 0));
     }
 
     // Update is called once per frame
@@ -83,5 +84,15 @@ public class UserControll : Car
         this.gameObject.SetActive(false);
         GameObject Canvas = GameObject.FindGameObjectWithTag("CanVas");
         Canvas.GetComponent<Canvas>().startGameover(TimeDie);
+    }
+    public void ChangeCar(int IdCar)
+    {
+        this.GetComponent<SpriteRenderer>().sprite = CarManager.Instance.Depots[IdCar].prefap;
+        MaxSpeed = CarManager.Instance.Depots[IdCar].MaxSpeed;
+        MaxSmooth = CarManager.Instance.Depots[IdCar].MaxSmooth;
+        Speed = CarManager.Instance.Depots[IdCar].Speed;
+        Smooth = CarManager.Instance.Depots[IdCar].Smooth;
+        AccelerationTimeSpeed = CarManager.Instance.Depots[IdCar].AccelerationTimeSpeed;
+        AccelerationTimeSmooth = CarManager.Instance.Depots[IdCar].AccelerationTimeSmooth;
     }
 }
