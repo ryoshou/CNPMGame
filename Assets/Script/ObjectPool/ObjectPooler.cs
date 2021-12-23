@@ -39,7 +39,7 @@ public class ObjectPooler : MonoBehaviour
             poolDictionary.Add(pool.tag, objectPool);
         }
     }
-    public GameObject SpawnFromPool(string tag, Vector2 Position, Quaternion quaternion)
+    public GameObject SpawnFromPool(string tag, Vector3 Position, Quaternion quaternion)
     {
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
         objectToSpawn.SetActive(true);

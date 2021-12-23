@@ -5331,6 +5331,26 @@ MonoBehaviour:
     prefap: {fileID: 3794670913993476983, guid: 1ea4caf5cd8815244918b6246b22008e,
       type: 3}
     size: 10
+  - tag: MapBackground0
+    prefap: {fileID: 4623111616013672024, guid: a4d723cfba0386a4eb91cb34d69a5ed1,
+      type: 3}
+    size: 9
+  - tag: MapBackground1
+    prefap: {fileID: 4175306988848565147, guid: e316ee9daae50324ab52bd6c8242cbae,
+      type: 3}
+    size: 9
+  - tag: MapBackground2
+    prefap: {fileID: 3302854260978901972, guid: 4dbeda8f3afcda347ad5f7b3d4d590f5,
+      type: 3}
+    size: 9
+  - tag: MapBackground3
+    prefap: {fileID: 3257827779466707342, guid: b1bd59b8e6d71824687480c0aac3089a,
+      type: 3}
+    size: 9
+  - tag: MapBackground4
+    prefap: {fileID: 3257827779466707342, guid: b1bd59b8e6d71824687480c0aac3089a,
+      type: 3}
+    size: 9
 --- !u!4 &1320076767
 Transform:
   m_ObjectHideFlags: 0
@@ -9025,7 +9045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981005934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1285345615}

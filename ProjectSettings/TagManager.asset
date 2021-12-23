@@ -9,6 +9,7 @@ TagManager:
   - explode
   - Coin
   - Setting
+  - MapBackground
   layers:
   - Default
   - TransparentFX

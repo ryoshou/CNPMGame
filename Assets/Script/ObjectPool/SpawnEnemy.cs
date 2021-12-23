@@ -35,7 +35,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             posX = Arr[Random.Range(0,1)]* Random.Range(SafeWitdh, DistanceWitdh);
             PosY = Arr[Random.Range(0, 1)] * Random.Range(SafeHeight, DistanceHeight);
-            Vec = new Vector2(posX, PosY);
+            Vec = new Vector3(posX, PosY,0);
             ObjectPooler.Instance.SpawnFromPool(Enemy.tag, Vec, Player.transform.rotation);
             StartCoroutine(Spawn(TimeSpawn));
         } 
