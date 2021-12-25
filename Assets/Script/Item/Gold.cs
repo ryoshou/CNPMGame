@@ -33,6 +33,7 @@ public class Gold : MonoBehaviour
         if (col2.gameObject.tag == "Player")
         {
             isCollect = false;
+            Player.GetComponent<UserControll>().PlaysoundCoin();
             this.gameObject.SetActive(false);
             GameObject Canvas = GameObject.FindGameObjectWithTag("CanVas");
             Canvas.GetComponent<Canvas>().AddGold();

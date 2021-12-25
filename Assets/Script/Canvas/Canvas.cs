@@ -13,7 +13,7 @@ public class Canvas : MonoBehaviour
     public float MaxSpeed = 15.0f;
     public Slider SliderSpeed;
     public Text TxtSpeed;
-    public Text Score;
+    public Text Score,overScore,hightScore,overCoin;
     public Text Gold,MyGold;
     public GameObject PanelGameover;
     public float TimeInstruire = 2.0f;
@@ -25,6 +25,7 @@ public class Canvas : MonoBehaviour
     protected int CurrentGold = 0;
     public GameObject SoundManager, spawEnemy;
     public AudioClip audioDie;
+    public int Myscore;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,7 @@ public class Canvas : MonoBehaviour
         PanelInGame.SetActive(true);
         U_instruction.SetActive(true);
         U_instruction.GetComponent<u_instruction>().start();
+        //Player.GetComponent<UserControll>().PlaysoundRun();
     }
     private IEnumerator Gameover(float second)
     {
@@ -64,6 +66,18 @@ public class Canvas : MonoBehaviour
             int gold = PlayerPrefs.GetInt("CURRENTCOIN", 50) + CurrentGold;
             PlayerPrefs.SetInt("CURRENTCOIN", gold);
             MyGold.text = gold + "";
+            overScore.text = Myscore+"";
+            int maxScore = PlayerPrefs.GetInt("HIGHTSCORE", 0);
+            overCoin.text = CurrentGold + "";
+            if (Myscore > maxScore)
+            {
+                PlayerPrefs.SetInt("HIGHTSCORE", Myscore);
+                hightScore.text = Myscore + "";
+            }    
+            else
+            {
+                hightScore.text = maxScore + "";
+            }    
         }
     }
     public void AddGold()
@@ -89,6 +103,7 @@ public class Canvas : MonoBehaviour
     public void startGameover(float TimeDie)
     {
         this.GetComponent<AudioSource>().PlayOneShot(audioDie);
+        Myscore = (int)(Time.time - CurrentTime);
         StartCoroutine(Gameover(TimeDie));
     }
     public void GameAgain()

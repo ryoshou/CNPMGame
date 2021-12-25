@@ -9,6 +9,8 @@ TagManager:
   - explode
   - Coin
   - Setting
+  - MapBackground
+  - namcham
   layers:
   - Default
   - TransparentFX

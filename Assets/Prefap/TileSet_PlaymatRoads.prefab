@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 243409731001740559}
   m_Layer: 0
   m_Name: TileSet_PlaymatRoads
-  m_TagString: Untagged
+  m_TagString: MapBackground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

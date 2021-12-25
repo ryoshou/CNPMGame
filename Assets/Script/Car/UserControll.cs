@@ -9,7 +9,10 @@ public class UserControll : Car
     protected Vector2 Touched;
     protected Vector2 Mid;
     public bool IsDie = false;
-    public AudioClip audiodie;
+    public AudioClip audiodie,audiorun,audioDrift,audioEnemydie,audioCoin;
+    public GameObject magnet;
+    public float timeMagnet = 5.0f;
+    public bool issound = false;
     void Start()
     {
         MindSpeed = Speed;
@@ -23,10 +26,10 @@ public class UserControll : Car
         if (Time.timeScale == 0 || IsDie == true)
             return;
         //transform.Translate(Vector2.up * 5 * Time.deltaTime);
-        if(Input.touchCount>0)
+        if (Input.touchCount > 0)
         {
-            Touched =Input.GetTouch(0).position; 
-            if(Touched.x >= Camera.main.pixelWidth/2)
+            Touched = Input.GetTouch(0).position;
+            if (Touched.x >= Camera.main.pixelWidth / 2)
             {
                 DriftRight();
             }
@@ -34,7 +37,7 @@ public class UserControll : Car
             {
                 DriftLeft();
             }
-            if(click==false)
+            if (click == false)
             {
                 StartDrift();
             }
@@ -43,7 +46,7 @@ public class UserControll : Car
         }
         else
         {
-            if(click==true)
+            if (click == true)
             {
                 StartDrift();
             }
@@ -63,7 +66,7 @@ public class UserControll : Car
         {
             DriftRight();
         }
-        if (Input.GetKeyUp(KeyCode.D)|| Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
         {
             click = false;
             StartDrift();
@@ -78,9 +81,22 @@ public class UserControll : Car
         }
         GoUp();
     }
+    public void PlaysoundRun()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(audiorun);
+    }
+    public void PlaysoundEnemydie()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(audioEnemydie);
+    }
+    public void PlaysoundCoin()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(audioCoin);
+    }
     public void PlayerDie()
     {
         IsDie = true;
+        magnet.SetActive(false);
         this.GetComponent<AudioSource>().PlayOneShot(audiodie);
         this.gameObject.SetActive(false);
         GameObject Canvas = GameObject.FindGameObjectWithTag("CanVas");
@@ -95,5 +111,16 @@ public class UserControll : Car
         Smooth = CarManager.Instance.Depots[IdCar].Smooth;
         AccelerationTimeSpeed = CarManager.Instance.Depots[IdCar].AccelerationTimeSpeed;
         AccelerationTimeSmooth = CarManager.Instance.Depots[IdCar].AccelerationTimeSmooth;
+    }
+   public void openMagnet()
+    {
+        magnet.SetActive(true);
+        StartCoroutine(endmagnet(timeMagnet));
+    }
+    private IEnumerator endmagnet(float second)
+    {
+        yield return new WaitForSeconds(second);
+        magnet.SetActive(false);
+       
     }
 }

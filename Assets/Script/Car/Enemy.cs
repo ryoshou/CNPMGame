@@ -34,7 +34,8 @@ public class Enemy : MonoBehaviour
     {
         if (col2.gameObject.tag == "Enemy")
         {
-           //col2.gameObject.SetActive(false);
+            //col2.gameObject.SetActive(false);
+            Player.GetComponent<UserControll>().PlaysoundEnemydie();
            this.gameObject.SetActive(false);
            GameObject Explode =  ObjectPooler.Instance.SpawnFromPool("explode", this.transform.position, this.transform.rotation);
            Explode.GetComponent<explode>().Hit();

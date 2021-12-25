@@ -33,9 +33,9 @@ public class SpawnEnemy : MonoBehaviour
         yield return new WaitForSeconds(second);
         if (Player.active == true)
         {
-            posX = Arr[Random.Range(0,1)]* Random.Range(SafeWitdh, DistanceWitdh) + Player.transform.position.x;
+            posX = Arr[Random.Range(0,1)]* Random.Range(SafeWitdh, DistanceWitdh)+ Player.transform.position.x;
             PosY = Arr[Random.Range(0, 1)] * Random.Range(SafeHeight, DistanceHeight)+ Player.transform.position.y;
-            Vec = new Vector2(posX, PosY);
+            Vec = new Vector3(posX, PosY,0);
             ObjectPooler.Instance.SpawnFromPool(Enemy.tag, Vec, Player.transform.rotation);
             StartCoroutine(Spawn(TimeSpawn));
         }    
@@ -52,14 +52,27 @@ public class SpawnEnemy : MonoBehaviour
             ObjectPooler.Instance.SpawnFromPool(Coin.tag, new Vector2(Vec.x + 0.5f, Vec.y + 0.5f), Player.transform.rotation);
             ObjectPooler.Instance.SpawnFromPool(Coin.tag, new Vector2(Vec.x + 0.5f, Vec.y), Player.transform.rotation);
             ObjectPooler.Instance.SpawnFromPool(Coin.tag, new Vector2(Vec.x, Vec.y + 0.5f), Player.transform.rotation);
-            StartCoroutine(SpawnGold(TimeSpawn));
+            StartCoroutine(SpawnGold(4.0f));
+        }
+    }
+    private IEnumerator Spawnmagnet(float second)
+    {
+        yield return new WaitForSeconds(second);
+        if (Player.active == true)
+        {
+            posX = Arr[Random.Range(0, 1)] * Random.Range(SafeWitdh, DistanceWitdh) + Player.transform.position.x;
+            PosY = Arr[Random.Range(0, 1)] * Random.Range(SafeHeight, DistanceHeight) + Player.transform.position.y;
+            Vec = new Vector2(posX, PosY);
+            ObjectPooler.Instance.SpawnFromPool("namcham", Vec, Player.transform.rotation);
+            StartCoroutine(Spawnmagnet(10.0f));
         }
     }
     public void Spanw()
     {
         reset();
         StartCoroutine(Spawn(TimeSpawn));
-        StartCoroutine(SpawnGold(1.0f));
+        StartCoroutine(SpawnGold(4.0f));
+        StartCoroutine(Spawnmagnet(10.0f));
     }
     public void reset()
     {
@@ -70,6 +83,11 @@ public class SpawnEnemy : MonoBehaviour
         }
         GameObject[] Coins = GameObject.FindGameObjectsWithTag(Coin.tag);
         foreach (GameObject obj in Coins)
+        {
+            obj.SetActive(false);
+        }
+        GameObject[] magnet = GameObject.FindGameObjectsWithTag("namcham");
+        foreach (GameObject obj in magnet)
         {
             obj.SetActive(false);
         }
