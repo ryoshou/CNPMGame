@@ -20,8 +20,11 @@ public class Canvas : MonoBehaviour
     public GameObject U_instruction;
     public GameObject PanelPauseGame;
     public GameObject btnPause, btnResume;
+    public GameObject SpawnEnemy;
     protected float CurrentTime = 0;
     protected int CurrentGold = 0;
+    public GameObject SoundManager, spawEnemy;
+    public AudioClip audioDie;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,7 @@ public class Canvas : MonoBehaviour
     public void Playgame()
     {
         ResumeGame();
+        SpawnEnemy.GetComponent<SpawnEnemy>().Spanw();
         PanelInGame.SetActive(true);
         U_instruction.SetActive(true);
         U_instruction.GetComponent<u_instruction>().start();
@@ -69,10 +73,14 @@ public class Canvas : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
+        SoundManager.GetComponent<AudioSource>().Stop();
+        spawEnemy.GetComponent<AudioSource>().Stop();
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
+        SoundManager.GetComponent<AudioSource>().Play();
+        spawEnemy.GetComponent<AudioSource>().Play();
     }
     public void BackHome()
     {
@@ -80,6 +88,7 @@ public class Canvas : MonoBehaviour
     }
     public void startGameover(float TimeDie)
     {
+        this.GetComponent<AudioSource>().PlayOneShot(audioDie);
         StartCoroutine(Gameover(TimeDie));
     }
     public void GameAgain()
@@ -89,17 +98,12 @@ public class Canvas : MonoBehaviour
         PanelGameover.SetActive(false);
         CurrentTime = Time.time;
         CurrentGold = 0;
+        Gold.text = CurrentGold + "";
         PanelPauseGame.SetActive(false);
         btnPause.SetActive(true);
         btnResume.SetActive(false);
         //Reset player
         Player.SetActive(true);
         Player.GetComponent<UserControll>().IsDie = false;
-        //Reset Enemy
-        GameObject[] Enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject obj in Enemys)
-        {
-            obj.SetActive(false);
-        }    
     }
 }

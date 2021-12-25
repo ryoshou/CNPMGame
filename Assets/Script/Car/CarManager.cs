@@ -34,7 +34,19 @@ public class CarManager : MonoBehaviour
     {
         foreach (depot car in Depots)
         {
-            int isbuy = PlayerPrefs.GetInt(car.id + "_ISBUY", 0);
+            int isbuy = -1;
+            int isSelect = -1;
+            if (car == Depots[0])
+            {
+                isbuy = PlayerPrefs.GetInt(car.id + "_ISBUY", 1);
+                isSelect = PlayerPrefs.GetInt(car.id + "_ISSelect", 1);
+            }
+            else
+            {
+                isbuy = PlayerPrefs.GetInt(car.id + "_ISBUY", 0);
+                isSelect = PlayerPrefs.GetInt(car.id + "_ISSelect", 0);
+            }
+            //buy
             if(isbuy == 1)
             {
                 car.isBuy = true;
@@ -43,7 +55,7 @@ public class CarManager : MonoBehaviour
             {
                 car.isBuy = false;
             }  
-            int isSelect = PlayerPrefs.GetInt(car.id + "_ISSelect", 0);
+            //select
             if (isSelect == 1)
             {
                 car.isSelect = true;

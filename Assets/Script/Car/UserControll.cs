@@ -9,7 +9,7 @@ public class UserControll : Car
     protected Vector2 Touched;
     protected Vector2 Mid;
     public bool IsDie = false;
-
+    public AudioClip audiodie;
     void Start()
     {
         MindSpeed = Speed;
@@ -81,6 +81,7 @@ public class UserControll : Car
     public void PlayerDie()
     {
         IsDie = true;
+        this.GetComponent<AudioSource>().PlayOneShot(audiodie);
         this.gameObject.SetActive(false);
         GameObject Canvas = GameObject.FindGameObjectWithTag("CanVas");
         Canvas.GetComponent<Canvas>().startGameover(TimeDie);
