@@ -228,10 +228,10 @@ MonoBehaviour:
   Depots:
   - id: 0
     prefap: {fileID: 21300000, guid: e0ae53943bd072549ba7dd2306b7211c, type: 3}
-    Smooth: 10
-    MaxSmooth: 17
-    Speed: 6
-    MaxSpeed: 9
+    Smooth: 15
+    MaxSmooth: 20
+    Speed: 4
+    MaxSpeed: 6
     AccelerationTimeSpeed: 1.5
     AccelerationTimeSmooth: 2
     isBuy: 1
@@ -242,10 +242,10 @@ MonoBehaviour:
     RatingSmooth: 3
   - id: 1
     prefap: {fileID: 21300000, guid: c0bf9e864bd19e14889b7504a3077dff, type: 3}
-    Smooth: 10
-    MaxSmooth: 17
-    Speed: 6
-    MaxSpeed: 9
+    Smooth: 17
+    MaxSmooth: 22
+    Speed: 5
+    MaxSpeed: 7
     AccelerationTimeSpeed: 1.5
     AccelerationTimeSmooth: 5
     isBuy: 0
@@ -256,10 +256,10 @@ MonoBehaviour:
     RatingSmooth: 4
   - id: 2
     prefap: {fileID: 21300000, guid: 11c98d3709e2fd34d80504e499d595fa, type: 3}
-    Smooth: 10
-    MaxSmooth: 17
+    Smooth: 20
+    MaxSmooth: 25
     Speed: 6
-    MaxSpeed: 9
+    MaxSpeed: 8
     AccelerationTimeSpeed: 1.5
     AccelerationTimeSmooth: 2
     isBuy: 0
@@ -270,9 +270,9 @@ MonoBehaviour:
     RatingSmooth: 6
   - id: 3
     prefap: {fileID: 21300000, guid: d02670efd475d8b4782086de95e0ba93, type: 3}
-    Smooth: 10
-    MaxSmooth: 17
-    Speed: 6
+    Smooth: 23
+    MaxSmooth: 28
+    Speed: 7
     MaxSpeed: 9
     AccelerationTimeSpeed: 1.5
     AccelerationTimeSmooth: 2
