@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  Smooth: 250
+  Smooth: 200
 --- !u!50 &1378400886
 Rigidbody2D:
   serializedVersion: 4
