@@ -6001,15 +6001,15 @@ MonoBehaviour:
       type: 3}
     size: 24
   - tag: MapBackground0
-    prefap: {fileID: 4623111616013672024, guid: a4d723cfba0386a4eb91cb34d69a5ed1,
+    prefap: {fileID: 3257827779466707342, guid: b1bd59b8e6d71824687480c0aac3089a,
       type: 3}
     size: 9
   - tag: MapBackground1
-    prefap: {fileID: 4175306988848565147, guid: e316ee9daae50324ab52bd6c8242cbae,
+    prefap: {fileID: 3257827779466707342, guid: b1bd59b8e6d71824687480c0aac3089a,
       type: 3}
     size: 9
   - tag: MapBackground2
-    prefap: {fileID: 3302854260978901972, guid: 4dbeda8f3afcda347ad5f7b3d4d590f5,
+    prefap: {fileID: 3257827779466707342, guid: b1bd59b8e6d71824687480c0aac3089a,
       type: 3}
     size: 9
   - tag: MapBackground3
